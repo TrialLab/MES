@@ -60,12 +60,12 @@ The knowledge-graph CSV uses four columns: `head`, `relation`, `tail`, and `sour
 
 ## 🏃 Usage
 
-The core workflow is driven by the Jupyter Notebook `MES-demo.ipynb`.
+The core workflow is driven by the Jupyter Notebook `MES.ipynb`.
 
 ### Running an Investigation
 
 ```bash
-jupyter notebook MES-demo.ipynb
+jupyter notebook MES.ipynb
 ```
 
 Set the clinical question, select the LLM backend, and confirm the data paths in the configuration cell. Run the cells sequentially to inspect the evidence, analytical outputs, claim-screening results, and final synthesis.
@@ -76,7 +76,7 @@ MES uses PubMed and ClinicalTrials.gov for evidence retrieval, Hugging Face for 
 
 ## 📂 Repository Structure
 
-* `MES-demo.ipynb`: Main notebook for configuring and running investigations.
+* `MES.ipynb`: Main notebook for configuring and running investigations.
 * `mes_pipeline.py`: Agent orchestration, iterative refinement, and output saving.
 * `Supervisor.py`: Clinical question structuring and report assembly.
 * `LiteratureMiner.py`: Literature retrieval and evidence extraction.
