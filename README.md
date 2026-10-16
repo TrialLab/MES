@@ -18,7 +18,7 @@ This repository contains the implementation of the MES framework accompanying th
 
 * **Python 3.11** and **Conda**.
 * **Ollama** for local model execution.
-* Access to MIMIC-IV tables and biomedical knowledge-graph resources.
+* Access to MIMIC-IV tables and biomedical knowledge-graph resources (e.g., [iBKH](https://github.com/wcm-wanglab/iBKH)).
 
 ### 2. Clone the Repository
 
