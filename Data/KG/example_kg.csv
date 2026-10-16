@@ -1,0 +1,147 @@
+head,relation,tail,source
+Acarbose,treats,type 2 diabetes mellitus,DrugBank
+Canagliflozin,treats,type 2 diabetes mellitus,DrugBank
+Dapagliflozin,treats,type 2 diabetes mellitus,DrugBank
+Dulaglutide,treats,type 2 diabetes mellitus,DrugBank
+Empagliflozin,treats,type 2 diabetes mellitus,DrugBank
+Furosemide,has a semantic relation with,type 2 diabetes mellitus,DrugBank
+Gliclazide,treats,type 2 diabetes mellitus,DrugBank
+Glimepiride,treats,type 2 diabetes mellitus,DrugBank
+Glipizide,treats,type 2 diabetes mellitus,DrugBank
+Glyburide,treats,type 2 diabetes mellitus,DrugBank
+Insulin degludec,treats,type 2 diabetes mellitus,DrugBank
+Insulin detemir,treats,type 2 diabetes mellitus,DrugBank
+Insulin glargine,treats,type 2 diabetes mellitus,DrugBank
+Insulin lispro,treats,type 2 diabetes mellitus,DrugBank
+Lactic acid,is associated with,type 2 diabetes mellitus,DrugBank
+Linagliptin,treats,type 2 diabetes mellitus,DrugBank
+Liraglutide,treats,type 2 diabetes mellitus,DrugBank
+Metformin,binds to,MT-ND1,DrugBank
+Metformin,binds to,NDUFA1,DrugBank
+Metformin,binds to,NDUFS1,DrugBank
+Metformin,downregulates,CCL2,DrugBank
+Metformin,downregulates,IL6,DrugBank
+Metformin,downregulates,PCK1,DrugBank
+Metformin,has a semantic relation with,"Renal Insufficiency, Chronic",DrugBank
+Metformin,has a semantic relation with,congestive heart failure,DrugBank
+Metformin,has an inferred relation with,Acidosis,DrugBank
+Metformin,has an inferred relation with,Anoxia,DrugBank
+Metformin,has an inferred relation with,Coma,DrugBank
+Metformin,has an inferred relation with,Critical Illness,DrugBank
+Metformin,has an inferred relation with,"Death, Sudden",DrugBank
+Metformin,has an inferred relation with,"Death, Sudden, Cardiac",DrugBank
+Metformin,has an inferred relation with,Infection,DrugBank
+Metformin,has an inferred relation with,Inflammation,DrugBank
+Metformin,has an inferred relation with,"Renal Insufficiency, Chronic",DrugBank
+Metformin,has an inferred relation with,Respiratory Insufficiency,DrugBank
+Metformin,has an inferred relation with,"Shock, Cardiogenic",DrugBank
+Metformin,has an inferred relation with,"Shock, Hemorrhagic",DrugBank
+Metformin,has an inferred relation with,acute kidney tubular necrosis,DrugBank
+Metformin,has an inferred relation with,adult respiratory distress syndrome,DrugBank
+Metformin,has an inferred relation with,bacterial sepsis,DrugBank
+Metformin,has an inferred relation with,cardiac arrest,DrugBank
+Metformin,has an inferred relation with,congestive heart failure,DrugBank
+Metformin,has an inferred relation with,diabetic ketoacidosis,DrugBank
+Metformin,has an inferred relation with,hepatorenal syndrome,DrugBank
+Metformin,has an inferred relation with,hypoglycemia,DrugBank
+Metformin,has an inferred relation with,toxic shock syndrome,DrugBank
+Metformin,interacts with,Cimetidine,DrugBank
+Metformin,interacts with,Dexamethasone,DrugBank
+Metformin,interacts with,Dolutegravir,DrugBank
+Metformin,interacts with,Dopamine,DrugBank
+Metformin,interacts with,Epinephrine,DrugBank
+Metformin,interacts with,Furosemide,DrugBank
+Metformin,interacts with,Hydrocortisone,DrugBank
+Metformin,interacts with,Insulin glargine,DrugBank
+Metformin,interacts with,Insulin human,DrugBank
+Metformin,interacts with,Insulin lispro,DrugBank
+Metformin,interacts with,Iodixanol,DrugBank
+Metformin,interacts with,Iohexol,DrugBank
+Metformin,interacts with,Iopamidol,DrugBank
+Metformin,interacts with,Metoprolol,DrugBank
+Metformin,interacts with,Norepinephrine,DrugBank
+Metformin,interacts with,Ranolazine,DrugBank
+Metformin,interacts with,Topiramate,DrugBank
+Metformin,interacts with,Vancomycin,DrugBank
+Metformin,is associated with,Abdominal Pain,DrugBank
+Metformin,is associated with,Albuminuria,DrugBank
+Metformin,is associated with,Anorexia,DrugBank
+Metformin,is associated with,Confusion,DrugBank
+Metformin,is associated with,Diarrhea,DrugBank
+Metformin,is associated with,Drug Overdose,DrugBank
+Metformin,is associated with,Hyperkalemia,DrugBank
+Metformin,is associated with,Hypotension,DrugBank
+Metformin,is associated with,Hypothermia,DrugBank
+Metformin,is associated with,Insulin Resistance,DrugBank
+Metformin,is associated with,Nausea,DrugBank
+Metformin,is associated with,PRKAA1,DrugBank
+Metformin,is associated with,PRKAA2,DrugBank
+Metformin,is associated with,PRKAB1,DrugBank
+Metformin,is associated with,PRKAB2,DrugBank
+Metformin,is associated with,PRKAG1,DrugBank
+Metformin,is associated with,SLC2A2,DrugBank
+Metformin,is associated with,Stroke,DrugBank
+Metformin,is associated with,Tachycardia,DrugBank
+Metformin,is associated with,Unconsciousness,DrugBank
+Metformin,is associated with,Vomiting,DrugBank
+Metformin,is associated with,Weight Loss,DrugBank
+Metformin,is associated with,acute kidney failure,DrugBank
+Metformin,is associated with,cardiovascular system disease,DrugBank
+Metformin,is associated with,drug-induced liver injury,DrugBank
+Metformin,is associated with,heart disease,DrugBank
+Metformin,is associated with,hyperglycemia,DrugBank
+Metformin,is associated with,hypertension,DrugBank
+Metformin,is associated with,kidney disease,DrugBank
+Metformin,is associated with,kidney failure,DrugBank
+Metformin,is associated with,lactic acidosis,DrugBank
+Metformin,is associated with,liver cirrhosis,DrugBank
+Metformin,is associated with,liver disease,DrugBank
+Metformin,is associated with,myocardial infarction,DrugBank
+Metformin,is associated with,obesity,DrugBank
+Metformin,is associated with,pancreatitis,DrugBank
+Metformin,is associated with,pulmonary edema,DrugBank
+Metformin,is associated with,vitamin b12 deficiency,DrugBank
+Metformin,is transported by,SLC22A1,DrugBank
+Metformin,is transported by,SLC22A2,DrugBank
+Metformin,is transported by,SLC22A3,DrugBank
+Metformin,is transported by,SLC29A4,DrugBank
+Metformin,is transported by,SLC47A1,DrugBank
+Metformin,is transported by,SLC47A2,DrugBank
+Metformin,targets,ETFDH,DrugBank
+Metformin,targets,GPD1,DrugBank
+Metformin,targets,PRKAB1,DrugBank
+Metformin,treats,abdominal obesity-metabolic syndrome 1,DrugBank
+Metformin,treats,polycystic ovary syndrome,DrugBank
+Metformin,treats,type 2 diabetes mellitus,DrugBank
+Norepinephrine,has a semantic relation with,type 2 diabetes mellitus,DrugBank
+Pioglitazone,treats,type 2 diabetes mellitus,DrugBank
+Semaglutide,treats,type 2 diabetes mellitus,DrugBank
+Sitagliptin,treats,type 2 diabetes mellitus,DrugBank
+Topiramate,is associated with,type 2 diabetes mellitus,DrugBank
+abdominal obesity-metabolic syndrome 1,resembles,type 2 diabetes mellitus,DOID
+atherosclerosis,resembles,type 2 diabetes mellitus,DOID
+coronary artery disease,resembles,type 2 diabetes mellitus,DOID
+diabetic ketoacidosis,is a,type 2 diabetes mellitus,DOID
+diabetic peripheral angiopathy,is a,type 2 diabetes mellitus,DOID
+gestational diabetes,resembles,type 2 diabetes mellitus,DOID
+hypertension,resembles,type 2 diabetes mellitus,DOID
+lipoatrophic diabetes mellitus,is a,type 2 diabetes mellitus,DOID
+obesity,resembles,type 2 diabetes mellitus,DOID
+polycystic ovary syndrome,resembles,type 2 diabetes mellitus,DOID
+type 1 diabetes mellitus,resembles,type 2 diabetes mellitus,DOID
+type 2 diabetes mellitus,is a,diabetes mellitus,DOID
+type 2 diabetes mellitus,is associated with,CCL2,DOID
+type 2 diabetes mellitus,is associated with,IL6,DOID
+type 2 diabetes mellitus,is associated with,Insulin secretion,DOID
+type 2 diabetes mellitus,is associated with,MT-ND1,DOID
+type 2 diabetes mellitus,is associated with,PCK1,DOID
+type 2 diabetes mellitus,is associated with,PRKAA1,DOID
+type 2 diabetes mellitus,is associated with,SLC22A3,DOID
+type 2 diabetes mellitus,is associated with,SLC2A2,DOID
+type 2 diabetes mellitus,presents with,Acute Coronary Syndrome,DOID
+type 2 diabetes mellitus,presents with,Albuminuria,DOID
+type 2 diabetes mellitus,presents with,Gastroparesis,DOID
+type 2 diabetes mellitus,presents with,Obesity,DOID
+type 2 diabetes mellitus,presents with,Proteinuria,DOID
+type 2 diabetes mellitus,presents with,Weight Gain,DOID
+type 2 diabetes mellitus,presents with,Weight Loss,DOID

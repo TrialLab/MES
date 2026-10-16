@@ -1,0 +1,15 @@
+{
+  "conditional_hazard_ratio_after_initiation": 0.8,
+  "grace_period_days": 2.0,
+  "cohort": "type 2 diabetes with an ICU stay during the index admission",
+  "30day": {
+    "counterfactual_mortality_initiate_within_grace": 0.1243,
+    "counterfactual_mortality_no_initiation": 0.1469,
+    "marginal_hazard_ratio": 0.8359
+  },
+  "90day": {
+    "counterfactual_mortality_initiate_within_grace": 0.2329,
+    "counterfactual_mortality_no_initiation": 0.2689,
+    "marginal_hazard_ratio": 0.8453
+  }
+}
