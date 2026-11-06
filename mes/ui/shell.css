@@ -1,0 +1,236 @@
+/* MES app shell — the Weill Cornell Medicine brand palette, the header brand and the Streamlit widget look.
+ *
+ * WCM Dark Orange (--accent) is the interactive accent: the primary call to action, the tab in use and the
+ * keyboard focus ring. Everything else is the WCM neutral ramp. Bright Orange (#E7751D) is not used: white on
+ * it is 3.1:1, below AA.
+ *
+ * The base palette, the font and the radii of the Streamlit widgets come from `.streamlit/config.toml`; what
+ * follows is the geometry and the per-widget treatment that config cannot express. Only appearance is set
+ * here — no copy, no layout, no logic. The MES page itself is styled by page.css / style.css.
+ */
+
+:root {
+    /* WCM brand tokens */
+    --accent:         #CF4520;   /* Dark Orange — every interactive accent (4.64:1 on white) */
+    --accent-hover:   #A8381A;
+    --accent-tint:    #FBEEE9;
+    --ink:            #1A1A1A;
+    --text-secondary: #555555;
+    --text-tertiary:  #666666;
+    --border:         #DDDDDD;
+    --surface-muted:  #F7F7F7;
+    --bg:             #FFFFFF;
+    --status-ok-fg:   #2E7D32;
+    --status-ok-bg:   #EDF5EE;
+
+    /* Geometry, unchanged from the previous build */
+    --radius-card: 24px;
+    --radius-control: 16px;
+    --radius-row: 10px;
+    --radius-pill: 999px;
+    --transition-control: 160ms ease;
+
+    /* The focus ring and the textarea ring: Dark Orange at 30 % */
+    --focus-ring: 0 0 0 2px rgb(207 69 32 / 30%);
+}
+
+/* Hide default Streamlit header/footer */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+/* ------------------------------------------------------------------ typography */
+/* "1898 Sans" is the WCM brand face; it is not shipped, so Inter (loaded by config.toml)
+ * carries the page and a local install of the brand font wins if present. */
+html, body,
+[data-testid="stAppViewContainer"],
+button, input, textarea, select {
+    font-family: "1898 Sans", Inter, system-ui, sans-serif;
+}
+
+[data-testid="stHeading"] :is(h1, h2, h3),
+[data-testid="stMarkdownContainer"] :is(h1, h2, h3) {color: var(--ink);}
+h1 {letter-spacing: -0.6px;}
+h2, h3 {letter-spacing: -0.2px;}
+
+/* Section labels (h4–h6).
+ * Scoped to the heading/markdown containers so Streamlit's own class-based heading
+ * styles (headingFontSizes in config.toml) do not outrank these. */
+[data-testid="stHeading"] :is(h4, h5, h6),
+[data-testid="stMarkdownContainer"] :is(h4, h5, h6) {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--text-secondary);
+}
+
+[data-testid="stCaptionContainer"] {
+    color: var(--text-secondary);
+    font-size: 0.86rem;
+    line-height: 1.65;
+}
+hr, [data-testid="stHeadingDivider"] {border-color: var(--border);}
+a, a:visited {color: var(--accent);}
+
+/* ------------------------------------------------------------------ accessibility */
+/* Every interactive element gets a visible keyboard ring in Dark Orange */
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[role="tab"]:focus-visible,
+[role="radio"]:focus-visible,
+[data-testid="stFileUploaderDropzone"]:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------------ widgets */
+[data-testid="stMainBlockContainer"] {
+    padding-top: 2rem;
+    max-width: 1680px;
+}
+
+/* The primary call to action — the most prominent button on the page */
+[data-testid="stBaseButton-primary"] {
+    background: var(--accent);
+    border-color: transparent;
+    color: var(--bg);
+    font-weight: 600;
+    min-height: 3rem;
+}
+[data-testid="stBaseButton-primary"]:hover,
+[data-testid="stBaseButton-primary"]:active {
+    background: var(--accent-hover);
+    border-color: transparent;
+    color: var(--bg);
+}
+[data-testid="stBaseButton-primary"] p {font-size: 1rem;}
+
+/* Secondary actions and downloads: white, outlined, neutral */
+[data-testid="stBaseButton-secondary"],
+[data-testid="stBaseButton-secondaryFormSubmit"],
+[data-testid="stPopoverButton"],
+[data-testid="stDownloadButton"] button {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--ink);
+    font-weight: 500;
+    min-height: 2.7rem;
+}
+[data-testid="stBaseButton-secondary"]:hover,
+[data-testid="stBaseButton-secondaryFormSubmit"]:hover,
+[data-testid="stPopoverButton"]:hover,
+[data-testid="stDownloadButton"] button:hover {
+    background: var(--surface-muted);
+    border-color: var(--border);
+    color: var(--ink);
+}
+[data-testid="stBaseButton-secondary"] p,
+[data-testid="stPopoverButton"] p {font-size: 0.93rem;}
+
+/* Inputs: white surfaces, Dark Orange focus ring at 30 % */
+[data-testid="stTextInput"] input,
+[data-testid="stTextArea"] textarea {
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.8;
+}
+[data-testid="stTextArea"] [data-baseweb="textarea"],
+[data-testid="stTextInput"] [data-baseweb="input"],
+[data-testid="stTextInput"] [data-baseweb="base-input"] {
+    background: var(--bg);
+    border-color: var(--border);
+}
+[data-testid="stTextArea"] [data-baseweb="textarea"]:focus-within,
+[data-testid="stTextInput"] [data-baseweb="input"]:focus-within,
+[data-testid="stTextInput"] [data-baseweb="base-input"]:focus-within {
+    border-color: var(--accent);
+    box-shadow: var(--focus-ring);
+}
+[data-testid="stWidgetLabel"] p {
+    color: var(--text-secondary);
+    font-size: 0.86rem;
+    font-weight: 500;
+}
+
+/* Panels */
+[data-testid="stExpander"] details {
+    border-color: var(--border);
+    border-radius: var(--radius-control);
+}
+[data-testid="stExpander"] summary {font-size: 0.93rem;}
+[data-testid="stAlert"] {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-control);
+}
+[data-testid="stAlert"] p {font-size: 0.9rem; line-height: 1.7;}
+[data-testid="stPopoverBody"] {border-radius: var(--radius-card);}
+[data-testid="stFileUploaderDropzone"] {
+    background: var(--surface-muted);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius-control);
+}
+
+/* Tabs: a thin Dark Orange rule under the one in use */
+[data-testid="stTabs"] [data-baseweb="tab-border"] {background: var(--border);}
+[data-testid="stTabs"] [data-baseweb="tab-highlight"] {background: var(--accent);}
+[data-testid="stTab"] p {font-size: 0.9rem;}
+
+[data-testid="stMetricValue"] {
+    color: var(--ink);
+    font-weight: 600;
+    letter-spacing: -0.8px;
+}
+
+/* ------------------------------------------------------------------ header brand */
+/* The logo is `ui/assets/WCM_MB_LOGO_HZSS2L_CLR_RGB.png` rendered as it is: height set, width
+ * auto, no crop, no recolour, no effect, no rotation.
+ *
+ * Why 90px and not 40px: the file is 1365 x 491 with the artwork inset by ~114px of
+ * transparent margin on every side, so the artwork is 53 % of the file's height. At 90px
+ * of file height the seal is 48px wide — the floor the seal must not go below — and the
+ * artwork itself stands 48px tall. The same arithmetic puts the file's own margin at 21px,
+ * and the 16px gap to the divider adds to it, so the clear space on every side exceeds the
+ * height of the "M" of "Medicine" (~23px at this size). Nothing is placed inside it. */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;                 /* the clear space either side of the divider */
+    flex-wrap: nowrap;
+}
+.brand-logo {
+    height: 90px;
+    width: auto;               /* the aspect ratio of the file is never touched */
+    flex: 0 0 auto;
+}
+.brand-divider {
+    flex: 0 0 auto;
+    width: 1px;
+    height: 28px;
+    background: var(--border);
+}
+.brand-name {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.35;
+    white-space: nowrap;
+}
+.brand-name strong {
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.brand-name span {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+/* Too narrow for both: the product name goes first, and the logo is never shrunk */
+@media (max-width: 1200px) {
+    .brand-divider, .brand-name {display: none;}
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {transition: none !important; animation: none !important;}
+}

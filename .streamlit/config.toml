@@ -1,0 +1,51 @@
+# The look of MES (read by Streamlit when the app is started from the repository root: ./run.sh or
+# `streamlit run mes/app.py`): the Weill Cornell Medicine brand palette.
+# Dark Orange (#CF4520) is the interactive accent; Cornell Red (#B31B1B) is kept for the brand mark (the logo in
+# the header). Everything else is the WCM neutral ramp (#000000 #555555 #666666 #DDDDDD #F7F7F7 #FFFFFF). Bright
+# Orange (#E7751D) is not used: white on it is 3.1:1, below AA.
+#
+# "1898 Sans" is the WCM brand face but is not shipped, so Inter carries the page (mes/ui/shell.css names 1898 Sans
+# first, so a local install of it wins).
+#
+# Only appearance is set here — no page, widget or server behaviour.
+
+[theme]
+base = "light"
+font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+baseFontSize = 14
+
+# Surfaces and ink
+backgroundColor = "#FFFFFF"          # --bg
+secondaryBackgroundColor = "#F7F7F7" # --surface-muted (inputs, code, sidebar)
+textColor = "#1A1A1A"                # --ink
+borderColor = "#DDDDDD"              # --border
+primaryColor = "#CF4520"             # --accent: the active step and the primary call to action
+linkColor = "#CF4520"                # --accent (4.64:1 on white, and white on it is 4.64:1)
+
+# Geometry: unchanged from the previous build
+baseRadius = "1rem"
+buttonRadius = "full"
+showWidgetBorder = true
+
+# Headings: 26 / 20 / 16 / 14 / 12 / 11 px — the type scale is unchanged
+headingFontSizes = ["1.85rem", "1.45rem", "1.15rem", "1rem", "0.86rem", "0.8rem"]
+headingFontWeights = [600, 600, 600, 600, 600, 600]
+
+# The semantic palette of st.success / st.warning / st.error / st.info.
+# Warning text is ink on a Dark Orange tint: #CF4520 is 4.64:1 on white but only ~4.2:1
+# on its own tint, so the hue sits in the background and the icon, never in the words.
+greenColor = "#2E7D32"               # --status-ok-fg
+greenBackgroundColor = "#EDF5EE"     # --status-ok-bg
+yellowColor = "#1A1A1A"
+yellowBackgroundColor = "#FBEEE9"   # --accent-tint
+orangeColor = "#1A1A1A"
+orangeBackgroundColor = "#FBEEE9"   # --accent-tint
+redColor = "#A8381A"                 # --accent-hover (6.5:1 on white); Cornell Red is a brand mark
+redBackgroundColor = "#FBEEE9"       # --accent-tint
+blueColor = "#555555"                # --text-secondary
+blueBackgroundColor = "#F7F7F7"
+grayColor = "#555555"
+grayBackgroundColor = "#F7F7F7"
+
+# Charts: the accent for the exposed arm, neutral grays for everything else
+chartCategoricalColors = ["#CF4520", "#666666", "#A8381A", "#999999", "#1A1A1A", "#DDDDDD"]

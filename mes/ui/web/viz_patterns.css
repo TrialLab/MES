@@ -1,0 +1,6 @@
+/* MES charts — descriptive studies (ui/web/viz_patterns.js): trajectories and treatment pathways */
+.mv-direct { font-size: 11.5px; font-weight: 650; paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+.mv-link { transition: stroke-opacity .15s ease; }
+.mv-link:hover, .mv-link:focus { stroke-opacity: .7; outline: none; }
+.mv-sk-label { font-size: 11.5px; fill: var(--ink); font-weight: 600; paint-order: stroke; stroke: var(--surface);
+  stroke-width: 3px; }

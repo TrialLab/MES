@@ -1,0 +1,32 @@
+# Everything kept on this computer only (notes, tools, local data and caches): one folder
+local/
+
+# Local configuration: keys, local paths (.env.example is the template)
+.env
+.env.*
+!.env.example
+
+# Local data: the iBKH store, the MIMIC-IV release and the store built from it (credentialed access — never commit),
+# the PDF library and its index
+data/
+
+# Caches and saved conversations: API responses, full texts, answers (may hold MIMIC-IV aggregates), history, teams
+.cache/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+.ipynb_checkpoints/
+
+# Test and screenshot output
+mes_browser_*/
+mes_gallery_*/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/

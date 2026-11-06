@@ -1,0 +1,26 @@
+/* MES page chrome in Streamlit's dark theme (after page.css, when st.context.theme.type is "dark") */
+.stApp:has(.mes-page) { --mp-accent: #E8784A; --mp-accent-2: #CF4520; --mp-tint: rgba(207, 69, 32, .18);
+  --mp-tint-bd: rgba(232, 120, 74, .45); --mp-ink: #F3F4F6; --mp-ink2: #C3C7CF; --mp-ink3: #A1A7B3; --mp-line: #2C313C;
+  --mp-line2: #262A34; --mp-surface: #161922; --mp-surface2: #1C2029; --mp-shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 28px rgba(0, 0, 0, .35); }
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stBaseButton-secondary"]:hover:not(:disabled),
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stPopoverButton"]:hover:not(:disabled),
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stDownloadButton"] button:hover:not(:disabled) {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .35); }
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stExpander"] details:hover { border-color: #3A404C; }
+.stApp:has(.mes-page) .st-key-mes_sources_bar [data-testid="stButtonGroup"] button:hover,
+.stApp:has(.mes-page) [data-testid="stMain"] .st-key-mes_sources_bar [data-testid="stPopoverButton"]:hover:not(:disabled) {
+  border-color: #3A404C; }
+.stApp:has(.mes-page) [data-testid="stMain"] .st-key-mes_src_litbox:has(.mes-src-on) [data-testid="stPopoverButton"],
+.stApp:has(.mes-page) [data-testid="stMain"] .st-key-mes_src_litbox:has(.mes-src-on) [data-testid="stPopoverButton"]:hover:not(:disabled) {
+  border-color: rgba(96, 165, 250, .45); background: rgba(59, 130, 246, .16); color: #93C5FD; }
+.stApp:has(.mes-page) .st-key-mes_src_mid [data-testid="stButtonGroup"] button:nth-of-type(1)[aria-pressed="true"] {
+  border-color: rgba(167, 139, 250, .45); background: rgba(139, 92, 246, .16); color: #C4B5FD; }
+.stApp:has(.mes-page) .st-key-mes_src_mid [data-testid="stButtonGroup"] button:nth-of-type(2)[aria-pressed="true"] {
+  border-color: rgba(251, 191, 36, .45); background: rgba(245, 158, 11, .14); color: #FCD34D; }
+.stApp:has(.mes-page) [data-testid="stMain"] .st-key-mes_src_rwdbox:has(.mes-src-on) [data-testid="stPopoverButton"],
+.stApp:has(.mes-page) [data-testid="stMain"] .st-key-mes_src_rwdbox:has(.mes-src-on) [data-testid="stPopoverButton"]:hover:not(:disabled) {
+  border-color: rgba(45, 212, 191, .45); background: rgba(20, 184, 166, .14); color: #5EEAD4; }
+.mes-src-menu, .mes-src-note { color: #A1A7B3; }
+/* the app shell's colours (ui/shell.css, chosen for a white page) on a page drawn dark: the header with
+   the product's name, widget labels and captions — also in the menus, which are drawn outside the app */
+body { --ink: #F3F4F6; --text-secondary: #C3C7CF; --text-tertiary: #A1A7B3; --border: #2C313C; }

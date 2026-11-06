@@ -1,0 +1,41 @@
+/* MES charts — the cohort builder's flow of patients (ui/web/viz_cohort.js); WCM palette, light and dark through the
+   variables of viz.css */
+.mv-cf-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 2px 0 12px; }
+.mv-cf-big { display: flex; align-items: baseline; gap: 8px; }
+.mv-cf-n { font-size: 30px; font-weight: 760; letter-spacing: -.02em; color: var(--ink); font-variant-numeric: tabular-nums; }
+.mv-cf-unit { font-size: 13px; color: var(--ink2); font-weight: 600; }
+.mv-cf-groups { display: flex; flex-wrap: wrap; gap: 6px 8px; width: 100%; }
+.mv-cf-group { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); border-radius: 999px;
+  padding: 3px 10px 3px 8px; font-size: 12.5px; color: var(--ink2); background: var(--surface); }
+.mv-cf-group > i { width: 9px; height: 9px; border-radius: 50%; background: var(--sc, var(--accent)); }
+.mv-cf-group > b { color: var(--ink); font-variant-numeric: tabular-nums; }
+.mv-cf { display: flex; flex-direction: column; gap: 0; }
+.mv-cf-step { display: grid; grid-template-columns: minmax(92px, auto) minmax(0, 1fr); gap: 12px; align-items: start;
+  border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; background: var(--surface);
+  transition: border-color .2s ease, background-color .2s ease, opacity .2s ease; }
+.mv-cf-step:hover { border-color: var(--accent-bd); }
+.mv-cf-role-base { background: var(--surface3); }
+.mv-cf-new { border-color: var(--accent-bd); background: linear-gradient(160deg, var(--accent-tint) 0%, var(--surface) 70%); }
+.mv-cf-changed { border-color: color-mix(in srgb, var(--warn) 40%, var(--line)); }
+.mv-cf-off { opacity: .62; border-style: dashed; background: transparent; }
+.mv-cf-off .mv-cf-label { text-decoration: line-through; text-decoration-color: var(--ink3); }
+.mv-cf-count { display: flex; flex-direction: column; gap: 3px; font-size: 17px; font-weight: 720;
+  font-variant-numeric: tabular-nums; color: var(--ink); }
+.mv-cf-count small { font-size: 11.5px; font-weight: 600; color: var(--ink3); }
+.mv-cf-text { min-width: 0; }
+.mv-cf-label { font-size: 12.8px; color: var(--ink2); line-height: 1.35; overflow-wrap: anywhere; }
+.mv-cf-bar { margin-top: 6px; }
+.mv-cf-bar i { transition: width .48s cubic-bezier(.2, .8, .2, 1); }
+.mv-cf-delta { display: inline-block; width: fit-content; font-size: 11.5px; font-weight: 700; border-radius: 6px;
+  padding: 1px 6px; color: var(--ink2); background: var(--surface2); font-variant-numeric: tabular-nums; }
+.mv-cf-up { background: var(--rwd-bg); }
+.mv-cf-down { background: var(--accent-tint); }
+.mv-cf-same { font-weight: 600; color: var(--ink3); }
+.mv-cf-badge { display: inline-block; margin-top: 4px; font-size: 10.5px; font-weight: 700; letter-spacing: .03em;
+  text-transform: uppercase; border-radius: 5px; padding: 1px 6px; color: var(--ink2); background: var(--surface2); }
+.mv-cf-badge-new { color: var(--accent); background: var(--accent-tint); }
+.mv-cf-badge-changed { color: var(--warn); background: var(--warn-bg); }
+.mv-cf-x { font-size: 11.5px; color: var(--ink3); border-left: 2px dashed var(--line); margin: 0 0 0 40px;
+  padding: 3px 0 3px 10px; }
+.mv-cf-x b { color: var(--bad); font-weight: 650; font-variant-numeric: tabular-nums; }
+@media (prefers-reduced-motion: reduce) { .mv-cf-bar i, .mv-cf-step { transition: none; } }

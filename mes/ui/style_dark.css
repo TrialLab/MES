@@ -1,0 +1,104 @@
+/* MES page in Streamlit's dark theme (added after style.css when st.context.theme.type is "dark") */
+:root {
+    --mes-accent: #E8784A; --mes-accent-50: rgba(207, 69, 32, 0.18); --mes-accent-bd: rgba(232, 120, 74, 0.40);
+    --mes-border: #30343E; --mes-gray: #9CA3AF;
+    --mes-lit: #93C5FD; --mes-lit-bg: rgba(59, 130, 246, 0.16); --mes-lit-bd: rgba(96, 165, 250, 0.45);
+    --mes-trial: #C4B5FD; --mes-trial-bg: rgba(139, 92, 246, 0.16); --mes-trial-bd: rgba(167, 139, 250, 0.45);
+    --mes-kg: #FCD34D; --mes-kg-bg: rgba(245, 158, 11, 0.14); --mes-kg-bd: rgba(251, 191, 36, 0.45);
+    --mes-rwd: #5EEAD4; --mes-rwd-bg: rgba(20, 184, 166, 0.14); --mes-rwd-bd: rgba(45, 212, 191, 0.45);
+}
+.mes-hero-tag { border-color: rgba(232, 120, 74, 0.45); color: #F09A73; }
+.mes-h, .mes-question, .mes-reading-title { color: #F3F4F6; }
+.mes-kicker { color: #8B93A1; }
+.mes-card { background: #161922; }
+.mes-takeaways { border-color: rgba(232, 120, 74, 0.40);
+    background: linear-gradient(135deg, rgba(207, 69, 32, 0.24) 0%, rgba(22, 25, 34, 1) 72%); }
+.mes-conflicts { border-color: rgba(251, 191, 36, 0.40); background: rgba(245, 158, 11, 0.09); }
+.mes-limits { border-color: #30343E; background: rgba(148, 163, 184, 0.07); }
+.mes-notice { background: #161922; color: #E5E7EB; }
+.mes-src { background: #161922; }
+.mes-src-title a { color: #F3F4F6 !important; }
+.mes-level, .mes-rel-high { color: #86EFAC; background: rgba(34, 197, 94, 0.14); }
+.mes-rel-moderate { color: #FCD34D; background: rgba(245, 158, 11, 0.16); }
+.mes-rel-low { color: #9CA3AF; background: rgba(148, 163, 184, 0.14); }
+.mes-passage { color: #D1D5DB; }
+.mes-trace { color: #A1A7B3; }
+.mes-reading { background: #161922; }
+.mes-badge-ok { color: #86EFAC; background: rgba(34, 197, 94, 0.12); border-color: rgba(74, 222, 128, 0.35); }
+.mes-badge-warn { color: #FCD34D; background: rgba(245, 158, 11, 0.12); border-color: rgba(251, 191, 36, 0.35); }
+.mes-badge-bad { color: #FCA5A5; background: rgba(239, 68, 68, 0.12); border-color: rgba(248, 113, 113, 0.35); }
+.mes-pill-off { color: #6B7280 !important; background: transparent !important; border-color: #30343E !important; }
+.mes-status-ok { color: #86EFAC; background: rgba(34, 197, 94, 0.12); }
+.mes-status-bad { color: #FDBA74; background: rgba(249, 115, 22, 0.12); }
+.mes-rwd-head { color: #5EEAD4; }
+.mes-warn { border-color: rgba(251, 191, 36, 0.40); background: rgba(245, 158, 11, 0.09); color: #FCD34D; }
+.mes-cc { background: #1F232D; border-color: #374151; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55); }
+.mes-cc-title { color: #F3F4F6; }
+.mes-cc-meta, .mes-cc-foot { color: #9CA3AF; }
+.mes-cc-text { color: #D1D5DB; background: #161922; border-left-color: #374151; }
+.mes-cc-link { color: #F09A73 !important; }
+[class*="st-key-mes_rel_"] button { background: #161922 !important; }      /* (the light rule is !important) */
+[class*="st-key-mes_rel_"] button:hover { border-color: rgba(232, 120, 74, 0.45) !important;
+    background: rgba(207, 69, 32, 0.20) !important; color: #F09A73; }
+.mes-quiet { color: #A1A7B3; }
+.mes-table th { color: #E5E7EB; background: #1B1F2A; }
+.mes-table td { border-bottom-color: #262A35; }
+
+.mes-team { background: #161922; }
+.mes-team-flow::before { background: #262A35; }
+.mes-team-ev { border-color: #262A35; background: #1B1F2A; }
+.mes-team-name { color: #E5E7EB; }
+.mes-team-dot { background: #161922; border-color: #4B5563; }
+.mes-team-running .mes-team-dot { border-color: #60A5FA; background: rgba(59, 130, 246, 0.3); }
+.mes-team-running .mes-team-state { color: #93C5FD; }
+.mes-team-done .mes-team-state, .mes-team-cached .mes-team-state { color: #86EFAC; }
+.mes-team-error .mes-team-state { color: #FCA5A5; }
+.mes-team-line { color: #D1D5DB; }
+.mes-team-changed { color: #FCD34D !important; }
+.mes-team-chip { border-color: #262A35; background: #1B1F2A; color: #E5E7EB; }
+.mes-proto { border-color: rgba(232, 120, 74, 0.35); background: linear-gradient(135deg, rgba(207, 69, 32, 0.18) 0%, #161922 75%); }
+.mes-proto .mes-card-title { color: #F09A73; }
+.mes-proto-what { color: #E5E7EB; }
+.mes-proto-run, .mes-proto-delta { color: #9CA3AF; }
+.mes-team-kept .mes-team-dot { border-color: #22C55E; background: rgba(34, 197, 94, 0.25); }
+.mes-team-kept .mes-team-state { color: #86EFAC; }
+.mes-team-edited .mes-team-dot { border-color: #E8784A; background: rgba(232, 120, 74, 0.25); }
+.mes-team-edited .mes-team-state { color: #F09A73; }
+/* the landing, the answer header and the cards of the redesign */
+:root { --mes-ink: #F3F4F6; --mes-ink2: #C3C7CF; --mes-muted: #A1A7B3; --mes-surface: #161922; --mes-surface-2: #1C2029;
+    --mes-shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 28px rgba(0, 0, 0, .35); }
+.mes-hero-bg { background: radial-gradient(42% 60% at 50% 0%, rgba(232, 120, 74, .16) 0%, rgba(232, 120, 74, 0) 70%); }
+.mes-hero-tag { background: rgba(22, 25, 34, .7); color: #F09A73; }
+.mes-hero h1 { color: #F3F4F6; }
+.mes-hero h1 em { background: linear-gradient(90deg, #F09A73 0%, #E8784A 100%); -webkit-background-clip: text; background-clip: text; }
+.mes-hero p { color: #C3C7CF; }
+.mes-cap { background: #161922; }
+.mes-cap:hover { border-color: #3A404C; }
+.mes-cap-name { color: #F3F4F6; }
+.mes-cap-desc { color: #C3C7CF; }
+.mes-cap-stat .mes-cap-none, .mes-db-none { color: #8B93A1; }
+.mes-dot-none { border-color: #6B7280; }
+.mes-db { color: #E5E7EB; background: #161922; border-color: #2C313C; }
+.mes-db-none { background: transparent; }
+.mes-flow { background: #161922; }
+.mes-flow-ico { background: #1C2029; }
+.mes-flow-name { color: #F3F4F6; }
+.mes-chip { background: #161922; color: #C3C7CF; }
+.mes-chip b { color: #F3F4F6; }
+.mes-chip-mode { color: #F09A73; }
+.mes-takeaways { background: radial-gradient(120% 120% at 100% 0%, rgba(207, 69, 32, .22) 0%, #161922 62%); }
+.mes-takeaways .mes-card-title { color: #F09A73; }
+.mes-src:hover { border-color: #3A404C; }
+.mes-landmark { color: #F09A73; background: rgba(207, 69, 32, .18); }
+.mes-disclaimer { color: #A1A7B3; }
+.mes-team-live { background: radial-gradient(120% 100% at 100% 0%, rgba(207, 69, 32, .16) 0%, #161922 60%); }
+.mes-team-running.mes-team-ev { border-color: rgba(96, 165, 250, .4); background: rgba(59, 130, 246, .10); }
+[class*="st-key-mes_ex_"] button strong { color: #F09A73; background: rgba(207, 69, 32, .18); }
+.mes-table tbody tr:hover td { background: #1B1F2A; }
+.mes-step { border-color: #262A35; background: #1B1F2A; color: #A1A7B3; }
+.mes-step.mes-team-running { color: #93C5FD; border-color: rgba(96, 165, 250, .4); background: rgba(59, 130, 246, .10); }
+.mes-step.mes-team-done { color: #86EFAC; }
+.mes-steps > i { background: #2C313C; }
+.mes-data-sub { color: #C3C7CF; }
+[class*="st-key-mes_dx_"] button { border-left-color: #5EEAD4 !important; }
+[class*="st-key-mes_dx_"] button [data-testid="stIconMaterial"] { color: #5EEAD4; }

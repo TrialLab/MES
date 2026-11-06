@@ -1,0 +1,31 @@
+# Exact versions MES was tested with (macOS arm64, Python 3.11.17).
+# python -m pip install -r requirements-lock.txt
+numpy==2.4.6
+pandas==2.3.3
+scipy==1.17.1
+scikit-learn==1.9.1
+requests==2.34.2
+urllib3==2.8.0
+python-dotenv==1.2.4
+pydantic==2.14.1
+openai==3.37.0
+openai-agents==0.24.0
+litellm==1.83.0
+boto3==1.43.118
+botocore==1.43.118
+duckdb==2.0.0
+pyarrow==26.0.0
+sentence-transformers==6.2.0
+torch==2.14.1
+transformers==5.20.2
+pymupdf==2.0
+truststore==0.10.5
+streamlit==1.66.1
+altair==6.3.0
+pillow==13.0.0
+markdown-it-py==4.2.0
+lifelines==0.30.3
+statsmodels==0.15.0
+psutil==7.2.2
+pytest==9.1.1
+websockets==16.1.1

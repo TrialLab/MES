@@ -1,0 +1,27 @@
+# Everything MES needs (Python 3.11): python -m pip install -r requirements.txt
+# Exact versions MES was tested with: requirements-lock.txt
+numpy>=1.26
+pandas>=2.0
+scipy>=1.11
+scikit-learn>=1.5
+requests>=2.32
+urllib3>=2.0
+python-dotenv>=1.0
+pydantic>=2.0
+openai>=2.0                    # LM Studio backend (OpenAI-compatible API)
+openai-agents[litellm]>=0.24   # optional agent layer (python -m mes.workflow --agents); LiteLLM runs it on Bedrock
+boto3>=1.40                    # Bedrock backend
+duckdb>=1.1                    # iBKH store and the MIMIC-IV store
+pyarrow>=14                    # Parquet (MIMIC-IV store)
+sentence-transformers>=5.0     # ranking and concept search (installs torch and transformers)
+pymupdf>=1.24                  # PDF text extraction
+truststore>=0.9                # OS trust store for HTTPS behind TLS-inspecting proxies
+streamlit>=1.66                # UI (st.components.v2 components)
+pillow>=10                     # the favicon (cropped from the header logo)
+markdown-it-py>=3              # HTML report export
+lifelines>=0.27                # MIMIC-IV analyses: Cox models, Kaplan-Meier
+statsmodels>=0.14              # MIMIC-IV analyses: weighted GLMs with robust SEs
+psutil>=5.9                    # analysis sandbox limits
+pytest>=8                      # tests
+websockets>=12                 # browser tests (headless Chrome)
+# optional: ollama (Ollama backend, selected by name in llm_zoo.create_llm)

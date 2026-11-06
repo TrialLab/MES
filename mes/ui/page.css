@@ -1,0 +1,94 @@
+/* MES page chrome: Streamlit's own widgets on the MES page, in the WCM palette. The MES page loads this file
+   (page.render), and every rule is scoped to an app that shows the MES marker (.mes-page), so no other page that
+   loads MES's component styles is restyled by it. */
+.stApp:has(.mes-page) { --mp-accent: #CF4520; --mp-accent-2: #A8381A; --mp-tint: #FBEEE9; --mp-tint-bd: #F2CBBE;
+  --mp-ink: #1A1A1A; --mp-ink2: #555555; --mp-ink3: #6B6B6B; --mp-line: #E4E4E4; --mp-line2: #EFEFEF; --mp-surface: #FFFFFF;
+  --mp-surface2: #F7F7F7; --mp-shadow: 0 1px 2px rgba(26, 26, 26, .04), 0 8px 24px rgba(26, 26, 26, .06); }
+.mes-page { display: none; }
+
+/* ------------------------------------------------------------------ buttons and popovers */
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stBaseButton-secondary"],
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stPopoverButton"],
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stDownloadButton"] button {
+  border-radius: 12px; border: 1px solid var(--mp-line); background: var(--mp-surface); color: var(--mp-ink);
+  box-shadow: 0 1px 1px rgba(26, 26, 26, .03); transition: border-color .16s ease, box-shadow .16s ease, transform .16s ease,
+  color .16s ease, background .16s ease; }
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stBaseButton-secondary"]:hover:not(:disabled),
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stPopoverButton"]:hover:not(:disabled),
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stDownloadButton"] button:hover:not(:disabled) {
+  border-color: var(--mp-tint-bd); color: var(--mp-accent); background: var(--mp-surface);
+  box-shadow: 0 4px 14px rgba(207, 69, 32, .10); transform: translateY(-1px); }
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stBaseButton-secondary"]:active:not(:disabled) { transform: none; }
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stBaseButton-primary"] { border-radius: 12px;
+  background: linear-gradient(180deg, var(--mp-accent) 0%, var(--mp-accent-2) 100%);
+  box-shadow: 0 2px 8px rgba(168, 56, 26, .25); }
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stBaseButton-tertiary"] { color: var(--mp-ink2); }
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stBaseButton-tertiary"]:hover { color: var(--mp-accent); }
+.stApp:has(.mes-page) [data-testid="stPopoverBody"] { border-radius: 16px; border: 1px solid var(--mp-line);
+  box-shadow: 0 18px 48px rgba(26, 26, 26, .16); }
+
+/* ------------------------------------------------------------------ expanders, tabs, status, dialogs */
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stExpander"] details { border-radius: 14px; border-color: var(--mp-line);
+  background: var(--mp-surface); transition: border-color .16s ease, box-shadow .16s ease; }
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stExpander"] details:hover { border-color: #D6D6D6; }
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stExpander"] details[open] { box-shadow: var(--mp-shadow); }
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stExpander"] summary { border-radius: 14px; font-weight: 600; }
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stExpander"] summary:hover { color: var(--mp-accent); }
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stTabs"] [role="tablist"] { gap: 2px; border-bottom: 1px solid var(--mp-line); }
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stTab"] { border-radius: 9px 9px 0 0; padding: 6px 10px; }
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stTab"]:hover { background: var(--mp-surface2); }
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stTab"][aria-selected="true"] p { color: var(--mp-accent); font-weight: 650; }
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stExpander"] [data-testid="stStatusWidget"],
+.stApp:has(.mes-page) [data-testid="stMain"] details:has([data-testid="stExpanderIconSpinner"]) { border-color: var(--mp-tint-bd); }
+.stApp:has(.mes-page) [data-testid="stDialog"] [role="dialog"] { border-radius: 20px; }
+.stApp:has(.mes-page) [data-testid="stToast"] { border-radius: 14px; box-shadow: 0 14px 36px rgba(26, 26, 26, .18); }
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stCode"] { border-radius: 12px; }
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stCode"] pre { border-radius: 12px; border: 1px solid var(--mp-line2); }
+.stApp:has(.mes-page) [data-testid="stMain"] [data-testid="stAlert"] { border-radius: 12px; }
+
+/* ------------------------------------------------------------------ the evidence sources: one colour each */
+/* the source bar (page._source_bar): Literature ▾ · ClinicalTrials.gov · iBKH graph · Real-world data ▾ — the two
+   menus look like the pills between them (not like the other menus of the page); a source that is on wears its colour */
+.stApp:has(.mes-page) .st-key-mes_sources_bar [data-testid="stButtonGroup"] button,
+.stApp:has(.mes-page) .st-key-mes_sources_bar [data-testid="stPopoverButton"] { border-radius: 999px; padding: 6px 14px;
+  min-height: 2.4rem; border: 1px solid var(--mp-line); background: var(--mp-surface); transition: all .16s ease; }
+.stApp:has(.mes-page) .st-key-mes_sources_bar [data-testid="stPopoverButton"] { padding-right: 10px; box-shadow: none; }
+.stApp:has(.mes-page) .st-key-mes_sources_bar [data-testid="stButtonGroup"] button:hover,
+.stApp:has(.mes-page) [data-testid="stMain"] .st-key-mes_sources_bar [data-testid="stPopoverButton"]:hover:not(:disabled) {
+  border-color: #CFCFCF; color: var(--mp-ink); background: var(--mp-surface); box-shadow: none; transform: translateY(-1px); }
+.stApp:has(.mes-page) .st-key-mes_sources_bar [data-testid="stButtonGroup"] button[aria-pressed="true"],
+.stApp:has(.mes-page) .st-key-mes_sources_bar [class*="st-key-mes_src_"]:has(.mes-src-on) [data-testid="stPopoverButton"] {
+  font-weight: 600; }
+.stApp:has(.mes-page) [data-testid="stMain"] .st-key-mes_src_litbox:has(.mes-src-on) [data-testid="stPopoverButton"],
+.stApp:has(.mes-page) [data-testid="stMain"] .st-key-mes_src_litbox:has(.mes-src-on) [data-testid="stPopoverButton"]:hover:not(:disabled) {
+  border-color: #BFDBFE; background: #EFF6FF; color: #1D4ED8; }
+.stApp:has(.mes-page) .st-key-mes_src_mid [data-testid="stButtonGroup"] button:nth-of-type(1)[aria-pressed="true"] {
+  border-color: #DDD6FE; background: #F5F3FF; color: #6D28D9; }
+.stApp:has(.mes-page) .st-key-mes_src_mid [data-testid="stButtonGroup"] button:nth-of-type(2)[aria-pressed="true"] {
+  border-color: #FDE68A; background: #FFFBEB; color: #B45309; }
+.stApp:has(.mes-page) [data-testid="stMain"] .st-key-mes_src_rwdbox:has(.mes-src-on) [data-testid="stPopoverButton"],
+.stApp:has(.mes-page) [data-testid="stMain"] .st-key-mes_src_rwdbox:has(.mes-src-on) [data-testid="stPopoverButton"]:hover:not(:disabled) {
+  border-color: #99F6E4; background: #F0FDFA; color: #0F766E; }
+.stApp:has(.mes-page) .st-key-mes_sources_bar button[aria-pressed="true"] p,
+.stApp:has(.mes-page) .st-key-mes_sources_bar [data-testid="stPopoverButton"] p { color: inherit; }
+/* the mark of a source that is on takes no room; the title of a menu */
+.stApp:has(.mes-page) [data-testid="stElementContainer"]:has(.mes-src-on) { display: none; }
+.mes-src-menu { font-size: .7rem; font-weight: 750; letter-spacing: .07em; text-transform: uppercase;
+  color: var(--mp-ink3, #6B6B6B); margin: 0 0 8px; }
+/* in a menu of the source bar each choice has its line of explanation right under its name (a menu is drawn outside
+   the app, at the end of the page: its title marks it) */
+[data-testid="stPopoverBody"]:has(.mes-src-menu) [data-testid="stVerticalBlock"] { gap: 0; }
+[data-testid="stPopoverBody"]:has(.mes-src-menu) [data-testid="stCaptionContainer"] { margin: -2px 0 12px 28px;
+  line-height: 1.4; }
+[data-testid="stPopoverBody"]:has(.mes-src-menu) [data-testid="stCaptionContainer"] p { margin: 0; }
+[data-testid="stPopoverBody"]:has(.mes-src-menu) [data-testid="stMarkdownContainer"]:has(.mes-src-menu, .mes-src-note) {
+  margin-bottom: 0; }
+.mes-src-note { font-size: .78rem; color: #6B6B6B; margin: 2px 0 0; line-height: 1.4; }
+
+/* ------------------------------------------------------------------ cards in the sources rail */
+.stApp:has(.mes-page) [data-testid="stColumn"]:has(.mes-rail-marker) [data-testid="stTabs"] [role="tablist"] { overflow-x: auto; }
+.stApp:has(.mes-page) [data-testid="stColumn"]:has(.mes-rail-marker) { scrollbar-width: thin; }
+
+@media (prefers-reduced-motion: reduce) {
+  .stApp:has(.mes-page) [data-testid="stMain"] * { transition: none !important; }
+}

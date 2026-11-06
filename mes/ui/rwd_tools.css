@@ -1,0 +1,90 @@
+/* MES page: the real-world data tools under a study card — the cohort builder (ui/cohort_builder.py), the patient explorer
+   (ui/patient_explorer.py) and the trial comparison (ui/trial_compare.py). Loaded with page.css: every rule is scoped
+   to an app that shows the MES page. */
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_toggle"] button,
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_toggle"] button,
+.stApp:has(.mes-page) [class*="st-key-mes_tp_"][class*="_toggle"] button {
+  border-radius: 999px; border: 1px solid var(--mp-tint-bd); background: linear-gradient(180deg, #FFFFFF 0%, #FFF8F5 100%);
+  color: var(--mp-accent-2); font-weight: 650; padding: 4px 14px; }
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_toggle"] button:hover,
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_toggle"] button:hover,
+.stApp:has(.mes-page) [class*="st-key-mes_tp_"][class*="_toggle"] button:hover { color: var(--mp-accent); }
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_box"],
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_box"],
+.stApp:has(.mes-page) [class*="st-key-mes_tp_"][class*="_box"] {
+  position: relative; border-radius: 18px; border-color: var(--mp-tint-bd);
+  background: radial-gradient(120% 90% at 100% 0%, rgba(207, 69, 32, .06) 0%, transparent 55%), var(--mp-surface);
+  box-shadow: var(--mp-shadow); overflow: hidden; }
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_box"]::before,
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_box"]::before,
+.stApp:has(.mes-page) [class*="st-key-mes_tp_"][class*="_box"]::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px;
+  background: linear-gradient(90deg, var(--mp-accent) 0%, #0F766E 100%); }
+.mes-cb-title { font-size: 1.05rem; font-weight: 720; letter-spacing: -.01em; color: var(--mp-ink, #1A1A1A); }
+.mes-cb-sub { font-size: .82rem; color: var(--mp-ink2, #555555); line-height: 1.5; margin: 2px 0 6px; max-width: 62rem; }
+.mes-cb-kicker { font-size: .7rem; font-weight: 750; letter-spacing: .07em; text-transform: uppercase;
+  color: var(--mp-ink3, #6B6B6B); margin: 10px 0 4px; }
+/* a criterion's or characteristic's name and its details (kind, unit, window, weight), in its card's first column */
+.mes-cb-name { font-size: .9rem; font-weight: 650; line-height: 1.3; color: var(--mp-ink, #1A1A1A); text-wrap: balance;
+  overflow-wrap: anywhere; }
+.mes-cb-meta { font-size: .74rem; color: var(--mp-ink3, #6B6B6B); margin: 1px 0 0; line-height: 1.35; }
+.mes-cb-head { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 8px; }
+.mes-cb-head .mes-cb-meta { margin: 0; }
+.mes-cb-meta b { color: var(--mp-accent, #CF4520); font-weight: 650; }
+/* the card: an even border and its kind as a slim bar inside the left edge (a thick left border on a rounded box
+   bends into the corners) */
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_card_"],
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_feat_"] {
+  --mes-bar: #0F766E; position: relative; gap: 6px; border: 1px solid var(--mp-line2); border-radius: 12px;
+  padding: 8px 10px 10px 18px; background: #FCFCFC; transition: border-color .16s ease, box-shadow .16s ease; }
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_card_"]::before,
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_feat_"]::before {
+  content: ""; position: absolute; left: 7px; top: 10px; bottom: 10px; width: 3px; border-radius: 3px;
+  background: var(--mes-bar); }
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_card_"]:hover,
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_feat_"]:hover { box-shadow: 0 4px 14px rgba(26, 26, 26, .06); }
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_card_exclude"] { --mes-bar: var(--mp-accent); }
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_card_exposure"] { --mes-bar: #CF4520; background: #FFFAF8; }
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_card_comparator"] { --mes-bar: #3B6EA8; }
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_feat_binary"] { --mes-bar: #3B6EA8; }
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_feat_category"] { --mes-bar: #8A5CC9; }
+/* markdown in a card is as tall as its text (Streamlit pulls every markdown block 1rem into what follows it, which
+   pushed the last line of a card through its border), and a column's widgets sit close together */
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_card_"] [data-testid="stMarkdownContainer"],
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_feat_"] [data-testid="stMarkdownContainer"] { margin-bottom: 0; }
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_card_"] [data-testid="stMarkdownContainer"] p,
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_feat_"] [data-testid="stMarkdownContainer"] p { margin-bottom: 0; }
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_card_"] [data-testid="stColumn"] [data-testid="stVerticalBlock"],
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_feat_"] [data-testid="stColumn"] [data-testid="stVerticalBlock"] {
+  gap: 2px; }
+/* a criterion's switch shows its whole name (Streamlit cuts a widget label to one line) */
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_card_"] [data-testid="stWidgetLabel"] [data-testid="stMarkdownContainer"],
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_card_"] [data-testid="stWidgetLabel"] p {
+  white-space: normal; overflow: visible; text-overflow: clip; }
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_card_"] [data-testid="stWidgetLabel"] p {
+  font-size: .9rem; font-weight: 600; line-height: 1.3; text-wrap: balance; overflow-wrap: anywhere; }
+/* where a criterion or characteristic is added (its own key: the Add button's must not match it) */
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_adder"],
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_adder"] { border: 1px dashed var(--mp-line); border-radius: 12px;
+  padding: 8px 12px 10px; margin-top: 8px; }
+.mes-cb-changes { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 4px; }
+.mes-cb-changes span { font-size: .74rem; color: var(--mp-ink2, #555555); background: #FFF6E5; border: 1px solid #F5DDB0;
+  border-radius: 8px; padding: 2px 8px; min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+.mes-cb-changes b { color: #9A5B0B; font-weight: 650; margin-right: 3px; }
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_run"] button:disabled,
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_run"] button:disabled,
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_addgo"] button:disabled,
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_addgo"] button:disabled,
+.stApp:has(.mes-page) [class*="st-key-mes_tp_"][class*="_go"] button:disabled {        /* a quiet surface, legible */
+  background: var(--mp-surface2); border: 1px solid var(--mp-line); color: var(--mp-ink3); box-shadow: none;
+  cursor: not-allowed; }
+/* a criterion's or characteristic's "More options" popover: its icon only (the label stays for screen readers) */
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_card_"] [data-testid="stPopoverButton"] > div > div[aria-hidden="true"],
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_feat_"] [data-testid="stPopoverButton"] > div > div[aria-hidden="true"] {
+  display: none; }
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_card_"] [data-testid="stPopoverButton"] [data-testid="stMarkdownContainer"],
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_feat_"] [data-testid="stPopoverButton"] [data-testid="stMarkdownContainer"] {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_card_"] [data-testid="stPopoverButton"],
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_feat_"] [data-testid="stPopoverButton"] {
+  min-height: 2rem; padding: 0 .55rem; border-radius: 10px; }

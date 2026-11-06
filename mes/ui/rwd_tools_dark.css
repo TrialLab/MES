@@ -1,0 +1,31 @@
+/* MES page, dark: the real-world data tools under a study card (scoped by theme.dark_scoped to a page drawn dark). Every rule
+   carries the light rules' `.stApp:has(.mes-page)`: the scope adds no specificity, so a dark rule wins over its light
+   twin only when it is as specific (and later). */
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_toggle"] button,
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_toggle"] button,
+.stApp:has(.mes-page) [class*="st-key-mes_tp_"][class*="_toggle"] button {
+  background: #1B1F2A; border-color: rgba(232, 120, 74, .45); color: #F4B596; }
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_box"],
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_box"],
+.stApp:has(.mes-page) [class*="st-key-mes_tp_"][class*="_box"] {
+  border-color: rgba(232, 120, 74, .35); background: radial-gradient(120% 90% at 100% 0%, rgba(207, 69, 32, .12) 0%,
+  transparent 55%), #161922; box-shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 28px rgba(0, 0, 0, .35); }
+.stApp:has(.mes-page) .mes-cb-title { color: #F3F4F6; }
+.stApp:has(.mes-page) .mes-cb-sub { color: #C3C7CF; }
+.stApp:has(.mes-page) .mes-cb-kicker, .stApp:has(.mes-page) .mes-cb-meta { color: #A1A7B3; }
+.stApp:has(.mes-page) .mes-cb-meta b { color: #E8784A; }
+.stApp:has(.mes-page) .mes-cb-name { color: #F3F4F6; }
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_card_"],
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_feat_"] { --mes-bar: #5EEAD4; background: #1B1F2A;
+  border-color: #262A35; }
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_card_exclude"],
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_card_exposure"] { --mes-bar: #E8784A; }
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_card_exposure"] { background: #201B1A; }
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_card_comparator"] { --mes-bar: #5A8BCB; }
+.stApp:has(.mes-page) [class*="st-key-mes_cb_"][class*="_adder"],
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_adder"] { border-color: #2C313C; }
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_feat_binary"] { --mes-bar: #5A8BCB; }
+.stApp:has(.mes-page) [class*="st-key-mes_px_"][class*="_feat_category"] { --mes-bar: #9271D0; }
+.stApp:has(.mes-page) .mes-cb-changes span { color: #C3C7CF; background: rgba(245, 158, 11, .12);
+  border-color: rgba(245, 158, 11, .3); }
+.stApp:has(.mes-page) .mes-cb-changes b { color: #FCD34D; }
