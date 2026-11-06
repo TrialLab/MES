@@ -1,8 +1,11 @@
 # MES Framework
 
+> This branch contains the implementation accompanying the MES manuscript.
+> For the latest system, including the updated interface and new features, please see [MES v2](https://github.com/TrialLab/MES/tree/v2).
+
 **MES** (Multi-Agent Evidence Synthesis) is an agentic framework for **medical evidence synthesis**. By coordinating six specialized agents (Supervisor, LiteratureMiner, RWD-Analyst, KG-Specialist, Statistician, and SafeChecker), it transforms natural-language clinical questions into structured reports integrating **published literature**, **real-world evidence**, and **biomedical knowledge graphs**.
 
-This repository contains the implementation of the MES framework accompanying the manuscript *"MES: A Multi-Agent Evidence Synthesis System for Medical Decision-Making"*.
+This branch contains the implementation of the MES framework accompanying the manuscript *"MES: A Multi-Agent Evidence Synthesis System for Medical Decision-Making"* ([medRxiv](https://www.medrxiv.org/content/10.64898/2026.09.15.26362921v1)).
 
 ## 🚀 Features
 
@@ -23,7 +26,7 @@ This repository contains the implementation of the MES framework accompanying th
 ### 2. Clone the Repository
 
 ```bash
-git clone https://github.com/TrialLab/MES.git
+git clone --branch main https://github.com/TrialLab/MES.git
 cd MES
 ```
 
